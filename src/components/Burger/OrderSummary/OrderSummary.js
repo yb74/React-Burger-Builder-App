@@ -3,7 +3,6 @@ import React from 'react';
 import Auxiliary from '../../../hoc/Auxiliary'
 
 const orderSummaru = (props) => {
-
     const ingredientSummary = Object.keys(props.ingredients)
         .map(igKey => {
             return (
