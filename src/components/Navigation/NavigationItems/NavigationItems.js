@@ -2,11 +2,16 @@ import React from 'react';
 
 import classes from './NavigationItems.module.css';
 import NavigationItem from './NavigationItem/NavigationItem';
+import {NavLink} from "react-router-dom";
 
 const navigationItems = () => (
     <ul className={classes.NavigationItems}>
-        <NavigationItem link="/" active>Burger Builder</NavigationItem>
-        <NavigationItem link="/">Checkout</NavigationItem>
+        <NavLink to='/' style={{textDecoration: 'none'}}>
+            <NavigationItem active>Burger Builder</NavigationItem>
+        </NavLink>
+        <NavLink to='checkout' style={{textDecoration: 'none'}}>
+            <NavigationItem>Checkout</NavigationItem>
+        </NavLink>
     </ul>
 );
 
